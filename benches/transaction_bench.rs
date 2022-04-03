@@ -1,9 +1,9 @@
+//! execute following before running bench:
+//!  cargo run --release --bin generate_data
+
 use criterion::{criterion_group, criterion_main, Criterion};
 // use std::io;
 use std::path::Path;
-
-// execute following before running bench:
-//  cargo run --bin generate_data
 
 fn run() {
     let file = "./sample_input.txt";
@@ -29,7 +29,7 @@ fn run() {
 }
 
 fn criterion_benchmark(c: &mut Criterion) {
-    c.bench_function("transaction", |b| b.iter(run));
+    c.bench_function("transaction singlecore", |b| b.iter(run));
 }
 
 criterion_group!(benches, criterion_benchmark);

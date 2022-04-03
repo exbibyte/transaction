@@ -1,3 +1,5 @@
+//! used to generate test data
+
 use rand::seq::SliceRandom;
 use rand::Rng;
 use std::collections::HashSet;
@@ -90,7 +92,7 @@ fn run() -> Result<(), Box<dyn Error>> {
         transaction::Amount(-999.)..transaction::Amount(999.),
     );
 
-    let num_inputs = 1000000;
+    let num_inputs = 10_000_000;
 
     for _ in 0..num_inputs {
         let input = input_builder.sample_random();

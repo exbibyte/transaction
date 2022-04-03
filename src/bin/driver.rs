@@ -1,3 +1,8 @@
+//! entry point for single core impl
+//!
+//! execute following before running bench:
+//!  cargo run --release --bin generate_data
+
 use std::env;
 use std::error::Error;
 use std::io;
